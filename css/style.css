@@ -1,0 +1,247 @@
+html {
+  font-size: 62.5%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*, *::after, *::before {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.6rem;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  height: 100%;
+}
+
+.container {
+  max-width: 450px;
+  min-height: 100vh;
+  margin: 4rem 1rem;
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  overflow: hidden;
+  background: url(/images/bg-mobile.svg), #674baf;
+  background-repeat: no-repeat, no-repeat;
+  background-position: top, center;
+  background-size: 100%, 100%;
+}
+
+@media (min-width: 900px) {
+  .container {
+    background: url(/images/bg-desktop.svg), #674baf;
+    background-size: cover;
+    max-width: 120rem;
+    min-height: 30vh;
+  }
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  padding-left: 3rem;
+  height: 15vh;
+}
+
+@media (min-width: 900px) {
+  header {
+    height: 10vh;
+    padding-top: 3rem;
+  }
+}
+
+header > img {
+  width: 16rem;
+}
+
+@media (min-width: 900px) {
+  header > img {
+    width: 20rem;
+  }
+}
+
+main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
+}
+
+@media (min-width: 900px) {
+  main {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 65vh;
+  }
+}
+
+main > .hero {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  padding: 4rem 0;
+}
+
+@media (min-width: 900px) {
+  main > .hero {
+    padding: 2rem 0;
+  }
+}
+
+main > .hero > img {
+  width: 80%;
+  height: 100%;
+  margin: 0;
+}
+
+.content {
+  width: 80%;
+  text-align: center;
+}
+
+@media (min-width: 900px) {
+  .content {
+    text-align: unset;
+    padding: 0 3rem 0 0;
+    margin-top: 15rem;
+  }
+}
+
+.content h1 {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+  font-family: 'Poppins', sans-serif;
+  font-size: 3.5rem;
+}
+
+@media (min-width: 900px) {
+  .content h1 {
+    line-height: 1.2;
+    font-size: 2.6rem;
+    letter-spacing: .2px;
+  }
+}
+
+.content__text {
+  line-height: 1.6;
+  font-size: 1.9rem;
+  margin-bottom: 4rem;
+}
+
+@media (min-width: 900px) {
+  .content__text {
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+  }
+}
+
+.content__btn {
+  background-color: #fff;
+  padding: 1rem 7rem;
+  border: none;
+  border-radius: 10rem;
+  color: #674baf;
+  font-size: 2rem;
+  font-weight: 300;
+  cursor: pointer;
+  margin-bottom: 7rem;
+  text-decoration: none;
+}
+
+.content__btn:hover, .content__btn:active {
+  background-color: #e882e8;
+  color: #fff;
+}
+
+@media (min-width: 900px) {
+  .content__btn {
+    padding: 1rem 4rem;
+    margin-bottom: 3rem;
+  }
+}
+
+@media (max-width: 260px) {
+  .content__btn {
+    padding: 1rem 4rem;
+  }
+}
+
+.content__social {
+  list-style: none;
+  margin-top: 9rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 3rem 0;
+}
+
+@media (min-width: 900px) {
+  .content__social {
+    margin-top: 5rem;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+}
+
+.content__social li {
+  margin-left: 2rem;
+  cursor: pointer;
+}
+
+.content__social li i {
+  border: 1px solid #fff;
+  border-radius: 1000%;
+  padding: 0.6rem;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.content__social li i:hover, .content__social li i:active {
+  color: #e882e8;
+  border-color: #e882e8;
+}
+/*# sourceMappingURL=style.css.map */
