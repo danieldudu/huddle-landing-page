@@ -18,6 +18,10 @@ body {
   display: grid;
   place-items: center;
   height: 100%;
+  background: url(/images/bg-mobile.svg), #674baf;
+  background-repeat: no-repeat, no-repeat;
+  background-position: top, center;
+  background-size: 100%, 100%;
 }
 
 .container {
@@ -33,16 +37,10 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
   overflow: hidden;
-  background: url(/images/bg-mobile.svg), #674baf;
-  background-repeat: no-repeat, no-repeat;
-  background-position: top, center;
-  background-size: 100%, 100%;
 }
 
 @media (min-width: 900px) {
   .container {
-    background: url(/images/bg-desktop.svg), #674baf;
-    background-size: cover;
     max-width: 120rem;
     min-height: 30vh;
   }
@@ -232,9 +230,17 @@ main > .hero > img {
   cursor: pointer;
 }
 
+.content__social li a {
+  color: #fff;
+  text-decoration: none;
+}
+
 .content__social li i {
+  width: 30px;
+  height: 30px;
+  text-align: center;
   border: 1px solid #fff;
-  border-radius: 1000%;
+  border-radius: 100%;
   padding: 0.6rem;
   font-size: 1.5rem;
   font-weight: 500;
